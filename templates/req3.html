@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+Metro City Template
+http://www.templatemo.com/tm-470-metro-city
+-->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Derpo</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700' rel='stylesheet' type='text/css'>
+	<link href="static/css/bootstrap.min.css" rel="stylesheet">
+	<link href="static/css/font-awesome.min.css" rel="stylesheet">
+	<link href="static/css/templatemo-style.css" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+ <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
+ <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<H2 >DEREPO: A DISTRIBUTED PRIVACY-PRESERVING DATA REPOSITORY WITH DECENTRALIZED ACCESS CONTROL FOR SMART HEALTH</H2>
+<body class="contact">
+	<div class="container">
+		<div class="row">
+			<div class="tm-header">
+<!--		<a href="index.html" class="tm-site-name">	<MARQUEE>Cloud <spin style="color:yellow">Computing</spin></MARQUEE>	</a>-->
+				<div class="mobile-menu-icon">
+	              <i class="fa fa-bars"></i>
+	            </div>
+				<nav class="tm-nav">
+					<ul>
+				<li><a href="{{url_for('csphome')}}" >Home</a></li>
+						<li><a href="{{url_for('req')}}" class="active">Requests</a></li>
+						<li><a href="{{url_for('index')}}">Logout</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div class="tm-banner tm-bn-4">
+
+		<div class="container">
+			<div class="row">
+					 <center>	<div class="col-md-8">
+
+		{% with messages = get_flashed_messages(with_categories=true) %}
+			{% if messages %}
+				{% for category, message in messages %}
+				<b><h3 style="color:yellow"><div class="alert alert-{{ category }}">
+						{{ message }}{{msg}}
+					</div></h3></b>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+
+		{% block content %} {% endblock %}
+
+		   <br></div></center>
+				<div class="tm-banner-text" style="width: 660px;height: 468px;">
+					<div class="tm-contact-form-container"style="height: 284px;" >
+					 <center>	<b><h4 style="color:YELLOW">ICloud Files Data</h4></b><br>
+
+<center>
+<table style="width:600px; border: 1px solid white; padding: 5px;">
+
+						<tr>
+
+
+						<b><th style="color:rgb(188, 188, 111);border: 1px solid white; padding: 5px;">#</th></b>
+							<b><th style="color:rgb(188, 188, 111);border: 1px solid white; padding: 5px;">File Id</th></b>
+							<b><th style="color:rgb(188, 188, 111);border: 1px solid white; padding: 5px;">Owner Name</th></b>
+							<b><th style="color:rgb(188, 188, 111);border: 1px solid white; padding: 5px;">User Name</th></b>
+							<b><th style="color:rgb(188, 188, 111);border: 1px solid white; padding: 5px;">User Mail-Id</th></b>
+							<b><th style="color:rgb(188, 188, 111);border: 1px solid white; padding: 5px;">File Name</th></b>
+							<b><th style="color:rgb(188, 188, 111);border: 1px solid white; padding: 5px;">Action</th></b>
+
+
+
+						</tr>
+
+						{% for r in row_val %}
+					<tr>
+						{% for v in r %}
+						<b><td style="color:white; border: 2px solid white"></b>
+							{{v}}
+{% if r.index(v)==5 %}
+							<b><td style="color:#f54248 ; border: 2px solid white"><a href="{{ url_for('req3back', s1=r[0],s2=r[4]) }}" style="color: red">Accept Request</a></td></b>
+
+						{% endif %}
+
+						{% endfor %}
+
+					</tr>
+						{% endfor %}
+
+					</table><br>
+
+	<br>
+<a href="{{url_for('req')}}">Go Back</a>
+</center>
+
+				</div>
+			</div>
+		</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript" src="static/js/jquery-1.11.2.min.js"></script>      <!-- jQuery -->
+	<script type="text/javascript" src="static/js/templatemo-script.js"></script>
+
+	 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<!-- Templatemo Script -->
+	<script>
+      /* Google map
+      ------------------------------------------------*/
+      var map = '';
+      var center;
+
+      function initialize() {
+        var mapOptions = {
+          zoom: 16,
+          center: new google.maps.LatLng(13.758468,100.567481),
+          scrollwheel: false,
+          draggable:false
+        };
+
+        map = new google.maps.Map(document.getElementById('google-map'),  mapOptions);
+
+        google.maps.event.addDomListener(map, 'idle', function() {
+          calculateCenter();
+        });
+
+        google.maps.event.addDomListener(window, 'resize', function() {
+          map.setCenter(center);
+        });
+      }
+
+      function calculateCenter() {
+        center = map.getCenter();
+      }
+
+      function loadGoogleMap(){
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' + 'callback=initialize';
+        document.body.appendChild(script);
+      }
+      $(document).ready(function(){
+        loadGoogleMap();
+      });
+    </script>
+
+</body>
+</html>
